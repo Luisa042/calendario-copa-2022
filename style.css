@@ -46,6 +46,8 @@ header {
   background: #1d1c19;
   border-bottom: 2px solid #f7dd43;
   border-radius: 6px;
+
+  animation: appear 0.5s;
 }
 
 .card h2 {
@@ -96,4 +98,27 @@ header {
   line-height: 125%;
 
   color: #e1e1e6;
+}
+
+.card h2:hover,
+.card ul li strong:hover,
+.card ul li img:hover {
+  transform: scale(1.1);
+}
+
+.card h2,
+.card ul li strong:hover,
+.card ul li img:hover {
+  transition: transform 0.3s;
+}
+
+@keyframes appear {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
