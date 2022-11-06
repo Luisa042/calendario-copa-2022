@@ -19,12 +19,7 @@ function createCard(date, weekDay) {
     `
 }
 
-document.querySelector('#app').innerHTML = `
-  <header>
-    <img src="./assets/logo.svg" alt="Logo da NLW" />
-  </header>
-  <main id="cards">
+document.querySelector('#cards').innerHTML = `
     ${createCard('24/11', 'quinta')}
     ${createCard('25/11', 'sexta')}
-  </main>
 `;
