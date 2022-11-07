@@ -47,7 +47,8 @@ header {
   border-bottom: 2px solid #f7dd43;
   border-radius: 6px;
 
-  animation: appear 0.5s;
+  opacity: 0;
+  animation: appear 0.4s forwards;
 }
 
 .card h2 {
