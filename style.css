@@ -123,3 +123,19 @@ header {
     opacity: 1;
   }
 }
+
+@media (min-width: 700px) {
+  #cards {
+    max-width: 670px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 1024px) {
+  #cards {
+    max-width: 1020px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
