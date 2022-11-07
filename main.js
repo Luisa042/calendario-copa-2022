@@ -8,18 +8,24 @@ function createGame(player1, player2, time) {
     `
 }
 
-function createCard(date, weekDay) {
+function createCard(date, weekDay, games) {
     return `
     <div class="card">
       <h2>${date} <span>${weekDay}</span></h2>
       <ul>
-      ${createGame('brazil', 'serbia', '16:00')}
+      ${games}
       </ul>
     </div>
     `
 }
 
-document.querySelector('#cards').innerHTML = `
-    ${createCard('24/11', 'quinta')}
-    ${createCard('25/11', 'sexta')}
-`;
+document.querySelector('#cards').innerHTML = 
+    createCard('24/11', 'quinta', createGame("uruguay", "south-korea","10:00") +
+    createGame("brazil", "serbia", "16:00")) +
+
+    createCard('28/11', 'segunda', createGame("brazil", "switzerland","13:00") +
+    createGame("portugal", "uruguay", "16:00")) +
+
+    createCard('02/12', 'sexta', createGame("ghana", "uruguay","12:00") +
+    createGame("cameroon", "brazil", "16:00"))
+
