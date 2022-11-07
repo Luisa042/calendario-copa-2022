@@ -1,5 +1,22 @@
 :root {
-  --bg-color:  #121214;
+  --app-background: url(./assets/bg-blue.svg);
+  --card-background: #202024;
+  --card-border-color: #338AF3;
+  --card-title-border-color: #0052B4;
+}
+
+body.green{
+  --app-background: url(./assets/bg-green.svg);
+  --card-background: #1A1F1B;
+  --card-border-color: #047C3F;
+  --card-title-border-color: #496E2D;
+}
+
+body.yellow{
+  --app-background: url(./assets/bg-yellow.svg);
+  --card-background: #1D1C19;
+  --card-border-color: #f7dd43;
+  --card-title-border-color: #746615;
 }
 
 * {
@@ -14,7 +31,7 @@ ul {
 
 body {
   background-color: #121214;
-  background-image: url(./assets/bg.svg);
+  background-image: var(--app-background);
   background-position-x: center;
   background-position-y: -715px;
 }
@@ -25,7 +42,8 @@ body * {
 
 #app {
   width: fit-content;
-  margin: 3.25rem auto;
+  margin: auto;
+  padding: 3.25rem 0 2.5rem 0;
 }
 
 header {
@@ -43,8 +61,8 @@ header {
   padding: 2rem 1.5rem;
   text-align: center;
 
-  background: #1d1c19;
-  border-bottom: 2px solid #f7dd43;
+  background: var(--card-background);
+  border-bottom: 2px solid var(--card-border-color);
   border-radius: 6px;
 
   opacity: 0;
@@ -58,7 +76,7 @@ header {
   align-items: center;
 
   padding: .5rem 1rem;
-  border: 1px solid #746615;
+  border: 1px solid var(--card-title-border-color);
   border-radius: 6px;
 
   width: fit-content;
@@ -102,14 +120,12 @@ header {
 }
 
 .card h2:hover,
-.card ul li strong:hover,
-.card ul li img:hover {
+.card ul li:hover {
   transform: scale(1.1);
 }
 
 .card h2,
-.card ul li strong:hover,
-.card ul li img:hover {
+.card ul li {
   transition: transform 0.3s;
 }
 
